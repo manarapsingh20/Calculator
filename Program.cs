@@ -12,7 +12,7 @@ namespace ManarapCalculator
             {
                
             Console.WriteLine("Enter your first number:");
-            int firstNumber = Convert.ToInt32(Console.ReadLine());
+            double firstNumber = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine(" ");
 
             Console.WriteLine("What operation would you like to use? (+,-,*,/)");
@@ -20,7 +20,7 @@ namespace ManarapCalculator
             Console.WriteLine(" ");
 
             Console.WriteLine("Enter your second number:");
-            int secondNumber = Convert.ToInt32(Console.ReadLine());
+            double secondNumber = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine(" ");
 
             Console.WriteLine("Your answer is:");
@@ -44,21 +44,20 @@ namespace ManarapCalculator
             {
                 Console.WriteLine(firstNumber / secondNumber);
             }
-           
+            
+            Console.WriteLine(" ");
             Console.WriteLine("do you want to continue (Y/N)");
             String result = Console.ReadLine();
            
-            if (result == "Y"){
+            if (result == "Y" || result == "y"){
                 continue_program = true;
             }
-            if(result == "N")
+            else
             {
                 continue_program = false;
             }
+            Console.WriteLine(" ");
         }
         }
-    }
-}
-
     }
 }
