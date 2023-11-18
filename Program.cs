@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace ManarapCalculator
 {
@@ -6,6 +6,11 @@ namespace ManarapCalculator
     {
         static void Main(string[] args)
         {
+            bool continue_program = true;
+           
+            while(continue_program == true)
+            {
+               
             Console.WriteLine("Enter your first number:");
             int firstNumber = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(" ");
@@ -20,25 +25,40 @@ namespace ManarapCalculator
 
             Console.WriteLine("Your answer is:");
 
-            if (operation == "+") 
+            if (operation == "+")
             {
                 Console.WriteLine(firstNumber + secondNumber);
             }
 
-            if (operation == "-") 
+            if (operation == "-")
             {
                 Console.WriteLine(firstNumber - secondNumber);
             }
 
-            if (operation == "*") 
+            if (operation == "*")
             {
                 Console.WriteLine(firstNumber * secondNumber);
             }
 
-            if (operation == "/") 
+            if (operation == "/")
             {
                 Console.WriteLine(firstNumber / secondNumber);
             }
+           
+            Console.WriteLine("do you want to continue (Y/N)");
+            String result = Console.ReadLine();
+           
+            if (result == "Y"){
+                continue_program = true;
+            }
+            if(result == "N")
+            {
+                continue_program = false;
+            }
         }
+        }
+    }
+}
+
     }
 }
