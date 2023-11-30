@@ -159,6 +159,8 @@ namespace TheUltimateCalculator{
                     Console.WriteLine("| |(_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) | |"); Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("| |(/) (=) (D) (I) (V) (I) (S) (I) (O) (N) (_) (_) (_) (_) (_) (_) | |"); Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("| |(_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) | |"); Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("| |(%) (=) (M) (O) (D) (U) (L) (U) (S) (_) (_) (_) (_) (_) (_) (_) | |"); Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("| |(_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) | |"); Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("| |(^) (=) (E) (X) (P) (O) (N) (E) (N) (T) (S) (_) (_) (_) (_) (_) | |"); Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("| |(_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) (_) | |"); Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("| |(S) (=) (S) (Q) (U) (A) (R) (E) ( ) (R) (O) (O) (T) (_) (_) (_) | |"); Console.ForegroundColor = ConsoleColor.White;
