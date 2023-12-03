@@ -154,10 +154,9 @@ namespace TheUltimateCalculator
 ────── The Ultimate Calculator ──────
 ┌────────────────────────────────────────┐
 │ sqrt - Square Root │
-│ sin - sine │
 │ floor or f - floor │
 │ ceil or c - ceiling │
-│ abs - absolute value │
+│ abs or a- absolute value │
 │ circumference or cir - │
 │ circumfrence of circle with radius x │
 │ ~ - random decimal between x and y │ 
@@ -266,7 +265,7 @@ namespace TheUltimateCalculator
 
                     // More logical error-checking
                     //------------------------
-                    if (oper != '+' && oper != '-' && oper != '*' && oper != '/' && oper != '%' && oper != '^' && oper != 'sqrt' && oper != 'abs' && oper != 'c' && oper != 'f' && oper != 'S' && oper != 'A' && oper != 'C' && oper != 'F' && oper != '~' && oper != "circumference")
+                    if (oper != '+' && oper != '-' && oper != '*' && oper != '/' && oper != '%' && oper != '^' && oper != 'sqrt' && oper != 'abs' && oper != 'c' && oper != 'f' && oper != 'cir' && oper != 'a' && oper != 'ceil' && oper != 'floor' && oper != '~' && oper != "circumference")
                     {
 
                         Console.BackgroundColor = ConsoleColor.White;
