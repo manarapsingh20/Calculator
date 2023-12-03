@@ -29,8 +29,8 @@ namespace TheUltimateCalculator
             double sideB =0;
             double hypotenuse =0;
             double answer = 0;
-            char oper;
-            char choice;
+            string oper;
+            string choice;
             String name;
             Random rdm = new Random();
 
