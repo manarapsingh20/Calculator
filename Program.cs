@@ -360,7 +360,7 @@ namespace TheUltimateCalculator
                     Console.Write("Enter the radius of your circle " + name + ": ");
                     try
                     {
-                        x = Convert.ToDouble(Console.ReadLine());
+                        z = Convert.ToDouble(Console.ReadLine());
 
                     }
                     catch
@@ -543,7 +543,7 @@ namespace TheUltimateCalculator
 
                 do
                 {
-                    if (oper != 's' && oper != 'S' && oper != 'a' && oper != 'A' && oper != 'c' && oper != 'C' && oper != 'f' && oper != 'F' && oper != "circumference")
+                    if (oper != 'sqrt' && oper != 'cir' && oper != 'a' && oper != 'abs' && oper != 'c' && oper != 'ceil' && oper != 'f' && oper != 'floor' && oper != "circumference")
                     {
                         try
                         {
