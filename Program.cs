@@ -700,9 +700,9 @@ namespace TheUltimateCalculator
                     answer = rdm.Next((int)x, (int)y); //casting: implicitely convert (this is beacuse Next function likes integers not doubles)
                 }//End of else if
                 
-                else if (oper == "circumfernce")
+                else if (oper == "circumfernce" || oper == "cir")
                 {
-                    
+                    answer = 2 * Math.PI * (z);
                 }//End of else if
 
 
@@ -724,23 +724,23 @@ namespace TheUltimateCalculator
                     Console.WriteLine(x + " raised to the power " + y + " is " + answer);
                 }//End of else if
 
-                else if (oper == 's' || oper == 'S')
+                else if (oper == "sqrt")
                 {
                     Console.WriteLine("The square root of " + x + " is " + answer);
                 }//End of else if
 
-                else if (oper == 'a' || oper == 'A')
+                else if (oper == 'a' || oper == 'abs')
                 {
                     Console.WriteLine("The absolute value of " + x + " is " + answer);
 
                 }//End of else if
 
-                else if (oper == 'c' || oper == 'C')
+                else if (oper == 'c' || oper == 'ceil')
                 {
                     Console.WriteLine("When you round " + x + " up to the nearest number, you get " + answer);
                 }//End of else if
 
-                else if (oper == 'f' || oper == 'F')
+                else if (oper == 'f' || oper == 'floor')
                 {
                     Console.WriteLine("When you round " + x + " down to the nearest number, you get " + answer);
                 }//End of else if
@@ -750,6 +750,11 @@ namespace TheUltimateCalculator
                     Console.WriteLine("A random number from " + x + " to " + y + " is " + answer);
                 }//End of else if
 
+                else if (oper == "circumference" || oper == "cir")
+                {
+                    Console.WriteLine("The circumference of a circle with the radius of " + z + " is " + answer);
+                }//End of else if 
+ 
 
 
 
