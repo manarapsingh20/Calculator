@@ -265,7 +265,7 @@ namespace TheUltimateCalculator
 
                     // More logical error-checking
                     //------------------------
-                    if (oper != '+' && oper != '-' && oper != '*' && oper != '/' && oper != '%' && oper != '^' && oper != 'sqrt' && oper != 'abs' && oper != 'c' && oper != 'f' && oper != 'cir' && oper != 'a' && oper != 'ceil' && oper != 'floor' && oper != '~' && oper != "circumference")
+                    if (oper != '+' && oper != '-' && oper != '*' && oper != '/' && oper != '%' && oper != '^' && oper != "sqrt" && oper != "abs" && oper != 'c' && oper != 'f' && oper != "cir" && oper != 'a' && oper != "ceil" && oper != "floor" && oper != '~' && oper != "circumference")
                     {
 
                         Console.BackgroundColor = ConsoleColor.White;
@@ -543,7 +543,7 @@ namespace TheUltimateCalculator
 
                 do
                 {
-                    if (oper != 'sqrt' && oper != 'cir' && oper != 'a' && oper != 'abs' && oper != 'c' && oper != 'ceil' && oper != 'f' && oper != 'floor' && oper != "circumference")
+                    if (oper != "sqrt" && oper != "cir" && oper != 'a' && oper != "abs" && oper != 'c' && oper != "ceil" && oper != 'f' && oper != "floor" && oper != "circumference")
                     {
                         try
                         {
@@ -675,22 +675,22 @@ namespace TheUltimateCalculator
                     answer = Math.Pow(x, y);
                 }//End of else if
 
-                else if (oper == 's' || oper == 'S')
+                else if (oper == "sqrt")
                 {
                     answer = Math.Sqrt(x);
                 }//End of else if
 
-                else if (oper == 'a' || oper == 'A')
+                else if (oper == 'a' || oper == "abs")
                 {
                     answer = Math.Abs(x);
                 }//End of else if
 
-                else if (oper == 'c' || oper == 'C')
+                else if (oper == 'c' || oper == "ceil")
                 {
                     answer = Math.Ceiling(x);
                 }//End of else if
 
-                else if (oper == 'f' || oper == 'F')
+                else if (oper == 'f' || oper == "floor")
                 {
                     answer = Math.Floor(x);
                 }//End of else if
@@ -729,18 +729,18 @@ namespace TheUltimateCalculator
                     Console.WriteLine("The square root of " + x + " is " + answer);
                 }//End of else if
 
-                else if (oper == 'a' || oper == 'abs')
+                else if (oper == 'a' || oper == "abs")
                 {
                     Console.WriteLine("The absolute value of " + x + " is " + answer);
 
                 }//End of else if
 
-                else if (oper == 'c' || oper == 'ceil')
+                else if (oper == 'c' || oper == "ceil")
                 {
                     Console.WriteLine("When you round " + x + " up to the nearest number, you get " + answer);
                 }//End of else if
 
-                else if (oper == 'f' || oper == 'floor')
+                else if (oper == 'f' || oper == "floor")
                 {
                     Console.WriteLine("When you round " + x + " down to the nearest number, you get " + answer);
                 }//End of else if
