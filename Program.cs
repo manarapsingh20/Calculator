@@ -29,8 +29,8 @@ namespace TheUltimateCalculator
             double sideB =0;
             double hypotenuse =0;
             double answer = 0;
-            string oper;
-            string choice;
+            char oper;
+            char choice;
             String name;
             Random rdm = new Random();
 
@@ -975,7 +975,7 @@ namespace TheUltimateCalculator
 
                     try
                     {
-                        choice = Convert.ToChar(Console.ReadLine());
+                        choice = Convert.ToString(Console.ReadLine());
                     }
 
                     catch
