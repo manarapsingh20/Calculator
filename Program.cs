@@ -150,8 +150,29 @@ namespace TheUltimateCalculator
 
                 do
                 {
-
-                    Console.Write("Hey, " + name + ". What type of operation would you like to perform (+,-,*,/,%,^,s,a,c,f,~,circumference,righttriangleperimeter)? \n");
+                    Console.WriteLine(@"
+────── The Ultimate Calculator ──────
+┌────────────────────────────────────────┐
+│ sqrt - Square Root │
+│ sin - sine │
+│ floor or f - floor │
+│ ceil or c - ceiling │
+│ abs - absolute value │
+│ circumference or cir - │
+│ circumfrence of circle with radius x │
+│ ~ - random decimal between x and y │ 
+│ + - addition │
+│ - - subtraction │
+│ * - multiplication │
+│ / - division │
+│ % - modulus │
+│ ^ - power │
+│ righttriangleperimeter or rtp - │
+│ perimeter of right triangle │
+│ with base x and height y │
+└────────────────────────────────────────┘
+");
+                    Console.Write("Hey, " + name + ". What type of operation would you like to perform (+,-,*,/,%,^,sqrt,a,c,f,~,circumference,righttriangleperimeter)? \n");
 
 
                     //logical error-checking
@@ -245,7 +266,7 @@ namespace TheUltimateCalculator
 
                     // More logical error-checking
                     //------------------------
-                    if (oper != '+' && oper != '-' && oper != '*' && oper != '/' && oper != '%' && oper != '^' && oper != 's' && oper != 'a' && oper != 'c' && oper != 'f' && oper != 'S' && oper != 'A' && oper != 'C' && oper != 'F' && oper != '~' && oper != "circumference")
+                    if (oper != '+' && oper != '-' && oper != '*' && oper != '/' && oper != '%' && oper != '^' && oper != 'sqrt' && oper != 'abs' && oper != 'c' && oper != 'f' && oper != 'S' && oper != 'A' && oper != 'C' && oper != 'F' && oper != '~' && oper != "circumference")
                     {
 
                         Console.BackgroundColor = ConsoleColor.White;
