@@ -24,10 +24,10 @@ namespace TheUltimateCalculator
             //----------------------
             double x = 0;
             double y = 0;
-            double z =0;
-            double sideA =0;
-            double sideB =0;
-            double hypotenuse =0;
+            double z = 0;
+            double sideA = 0;
+            double sideB = 0;
+            double hypotenuse = 0;
             double answer = 0;
             char oper;
             char choice;
@@ -174,7 +174,7 @@ namespace TheUltimateCalculator
 │ with base x and height y │
 └────────────────────────────────────────┘
 ");
-                    Console.Write("Hey, " + name + ". What type of operation would you like to perform (+,-,*,/,%,^,sqrt,a,c,f,~,circumference,righttriangleperimeter)? \n");
+                    Console.Write("Hey, " + name + ". What type of operation would you like to perform (+,-,*,/,%,^,s,a,c,f,~,circumference,righttriangleperimeter)? \n");
 
 
                     //logical error-checking
@@ -266,9 +266,9 @@ namespace TheUltimateCalculator
 
                     Console.Clear();
 
-                    // More logical error-checking
-                    //------------------------
-                if (oper != '+' && oper != '-' && oper != '*' && oper != '/' && oper != '%' && oper != '^' && oper != 's' && oper != 'a' && oper != 'c' && oper != 'f' && oper != 'C' && oper != 'A' && oper != 'F' && oper != 'S' && oper != '~' && oper != 'p' && oper != 'P')
+                    // More logical error-checking
+                    //------------------------
+                    if (oper != '+' && oper != '-' && oper != '*' && oper != '/' && oper != '%' && oper != '^' && oper != 's' && oper != 'a' && oper != 'c' && oper != 'f' && oper != 'C' && oper != 'A' && oper != 'F' && oper != 'S' && oper != '~' && oper != 'p' && oper != 'P')
                     {
 
                         Console.BackgroundColor = ConsoleColor.White;
@@ -355,378 +355,390 @@ namespace TheUltimateCalculator
 
                 } while (true);
 
-                
+
                 // Get radius of the circle from the user
                 // -------------------------------------
-                do
+
+                if (oper == 'C')
                 {
-
-                    Console.Write("Enter the radius of your circle " + name + ": ");
-                    try
+                    do
                     {
-                        z = Convert.ToDouble(Console.ReadLine());
 
-                    }
-                    catch
-                    {
-                        Console.BackgroundColor = ConsoleColor.Blue;
-                        Console.Clear();
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("Please write down the radius again " + name);
-                        System.Threading.Thread.Sleep(2000);
-                        Console.WriteLine("                                   :oooooooooo:");
-                        Console.WriteLine("                        ::oOOOOooo:::::ooooO88Oo:");
-                        Console.WriteLine("                     :oOOo:                   :oO8O:");
-                        Console.WriteLine("                  :O8O:                           oO8o");
-                        Console.WriteLine("                O8O:                                 :OO:");
-                        Console.WriteLine("              o8o                                      :8o");
-                        Console.WriteLine("             88:                                         O8:");
-                        Console.WriteLine("           o8o                                            :8o");
-                        Console.WriteLine("          8O:                                               oO");
-                        Console.WriteLine("         8o                                                  oO");
-                        Console.WriteLine("        8o                                                    Oo");
-                        Console.WriteLine("      :8o                                              :      :8:");
-                        Console.WriteLine("     :8:                                               :       :8:");
-                        Console.WriteLine("    :8:                                               :o        oO");
-                        Console.WriteLine("    O::o                                              oo         8:");
-                        Console.WriteLine("   :o:ooO                                             oo         o8");
-                        Console.WriteLine("   8    oo                                            :o          8o");
-                        Console.WriteLine("  oo     8o                                            OO:        :8");
-                        Console.WriteLine("  8      o8:                                            O8O:       8:");
-                        Console.WriteLine(" :o      :88                                             :8O       :O");
-                        Console.WriteLine(" o:     ::88:                                             O8        8");
-                        Console.WriteLine(" 8       888:                                             O8o       O");
-                        Console.WriteLine(":8       :88:                                             888Ooo:   oo");
-                        Console.WriteLine("oo       oO8:                                             888888o   :O");
-                        Console.WriteLine("Oo       O88           :oO88O:            oO88Oo:         O8888O    :O");
-                        Console.WriteLine("O:  ::   :88      :oO888888888:          8888888888OOo:    8888:    :O");
-                        Console.WriteLine("O:  :o    8o   o88888888888888:          88888888888888O:   o88     :O");
-                        Console.WriteLine("Oo   oo  oO  o888888888888888O           8888888888888888o   88     :O");
-                        Console.WriteLine(":O    O: oo  8888888888888888:          o88888888888888888   88     :O");
-                        Console.WriteLine(" 8    :o:8:  8888888888888888:::         :8888888888888888  o888o:::8O");
-                        Console.WriteLine(" O:   :88:   O88888888888888888           O888888888888888  o88888888O");
-                        Console.WriteLine("  o   :8O    o888888888888888O            O88888888888888O   88888888o");
-                        Console.WriteLine("  O:  :8:    88888888888888O:      :      O888888888888888   O8888888:");
-                        Console.WriteLine("  :O  :8     88888888888888       o88:    :o88888888888888    8888888");
-                        Console.WriteLine("   OoooO    :8888888888O:8o      :8O88       :O8888888888o     O888oo");
-                        Console.WriteLine("    888:     8888888o:  8O       :8o88O         O888888O:          :");
-                        Console.WriteLine("    :88       oOOo:   :O:        :8:888          8o");
-                        Console.WriteLine("     88              o:          88oO88o      :: :oo            :");
-                        Console.WriteLine("     88::               oo      O88O:888o    O8o:   :   ::     : :");
-                        Console.WriteLine("     8o o:                     o88oo O888    :8        :88   :: ::");
-                        Console.WriteLine("     oO  oo     o              O8o : O888     :o       oO8o ::  O");
-                        Console.WriteLine("      O:  Oo  ::o              OO    OO :             :oO88 O::O:");
-                        Console.WriteLine("       O  :8: :88o             OO    Oo             :O888O  8OO:");
-                        Console.WriteLine("       oo  Oo  O888o           :O:o:  :            o8888o  :O");
-                        Console.WriteLine("        :O888  :88888           :o  Oo            o8888o   8:");
-                        Console.WriteLine("           :8:  O8888               8            :O888O   :8");
-                        Console.WriteLine("           Oo  :8888               o             :888    :O");
-                        Console.WriteLine("            :O   o888  ::                         o88:    Oo");
-                        Console.WriteLine("            :O    O88OO8oOOoOOoOooOooOOOOOOOOOO88O88O     O:");
-                        Console.WriteLine("            OO     888:: o :o: o  o   O: 8: O o::o 8:     8");
-                        Console.WriteLine("           :8O     :88o:  :    :  :      ::        8      O");
-                        Console.WriteLine("           O8o      Oo:8oo:    :          :   :::oo8     :O");
-                        Console.WriteLine("           88o      Oo O :ooOOOoOO:OO   :8O:O O  o O     :O");
-                        Console.WriteLine("           88o      Oo :      o:o: :o    Oo : :  o       :O");
-                        Console.WriteLine("           88O       :oo:oo:o o :  :: oo :: o O::o       o:");
-                        Console.WriteLine("           888         :::::oO8O8OoO8O88oOOoo:         :Oo");
-                        Console.WriteLine("            O88Oo::               ::                  :O");
-                        Console.WriteLine("             :oO8888o                               :Oo");
-                        Console.WriteLine("                 :o88o                      oo    o8O:");
-                        Console.WriteLine("                    O8o                     Oo  o88o");
-                        Console.WriteLine("                     o8O     Oo    o           o88");
-                        Console.WriteLine("                      :88o        O:          O88");
-                        Console.WriteLine("                        O88o     :8o        o88O");
-                        Console.WriteLine("                          o88ooOO888O::::oO88O:");
-                        Console.WriteLine("                            o8888888888888Oo");
+                        Console.Write("Enter the radius of your circle " + name + ": ");
+                        try
+                        {
+                            z = Convert.ToDouble(Console.ReadLine());
 
-                        System.Threading.Thread.Sleep(500);
-                        Console.BackgroundColor = ConsoleColor.Black;
-                        Console.Clear();
-                        continue;
-                    }
-                    break;
-                } while (true);
+                        }
+                        catch
+                        {
+                            Console.BackgroundColor = ConsoleColor.Blue;
+                            Console.Clear();
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine("Please write down the radius again " + name);
+                            System.Threading.Thread.Sleep(2000);
+                            Console.WriteLine("                                   :oooooooooo:");
+                            Console.WriteLine("                        ::oOOOOooo:::::ooooO88Oo:");
+                            Console.WriteLine("                     :oOOo:                   :oO8O:");
+                            Console.WriteLine("                  :O8O:                           oO8o");
+                            Console.WriteLine("                O8O:                                 :OO:");
+                            Console.WriteLine("              o8o                                      :8o");
+                            Console.WriteLine("             88:                                         O8:");
+                            Console.WriteLine("           o8o                                            :8o");
+                            Console.WriteLine("          8O:                                               oO");
+                            Console.WriteLine("         8o                                                  oO");
+                            Console.WriteLine("        8o                                                    Oo");
+                            Console.WriteLine("      :8o                                              :      :8:");
+                            Console.WriteLine("     :8:                                               :       :8:");
+                            Console.WriteLine("    :8:                                               :o        oO");
+                            Console.WriteLine("    O::o                                              oo         8:");
+                            Console.WriteLine("   :o:ooO                                             oo         o8");
+                            Console.WriteLine("   8    oo                                            :o          8o");
+                            Console.WriteLine("  oo     8o                                            OO:        :8");
+                            Console.WriteLine("  8      o8:                                            O8O:       8:");
+                            Console.WriteLine(" :o      :88                                             :8O       :O");
+                            Console.WriteLine(" o:     ::88:                                             O8        8");
+                            Console.WriteLine(" 8       888:                                             O8o       O");
+                            Console.WriteLine(":8       :88:                                             888Ooo:   oo");
+                            Console.WriteLine("oo       oO8:                                             888888o   :O");
+                            Console.WriteLine("Oo       O88           :oO88O:            oO88Oo:         O8888O    :O");
+                            Console.WriteLine("O:  ::   :88      :oO888888888:          8888888888OOo:    8888:    :O");
+                            Console.WriteLine("O:  :o    8o   o88888888888888:          88888888888888O:   o88     :O");
+                            Console.WriteLine("Oo   oo  oO  o888888888888888O           8888888888888888o   88     :O");
+                            Console.WriteLine(":O    O: oo  8888888888888888:          o88888888888888888   88     :O");
+                            Console.WriteLine(" 8    :o:8:  8888888888888888:::         :8888888888888888  o888o:::8O");
+                            Console.WriteLine(" O:   :88:   O88888888888888888           O888888888888888  o88888888O");
+                            Console.WriteLine("  o   :8O    o888888888888888O            O88888888888888O   88888888o");
+                            Console.WriteLine("  O:  :8:    88888888888888O:      :      O888888888888888   O8888888:");
+                            Console.WriteLine("  :O  :8     88888888888888       o88:    :o88888888888888    8888888");
+                            Console.WriteLine("   OoooO    :8888888888O:8o      :8O88       :O8888888888o     O888oo");
+                            Console.WriteLine("    888:     8888888o:  8O       :8o88O         O888888O:          :");
+                            Console.WriteLine("    :88       oOOo:   :O:        :8:888          8o");
+                            Console.WriteLine("     88              o:          88oO88o      :: :oo            :");
+                            Console.WriteLine("     88::               oo      O88O:888o    O8o:   :   ::     : :");
+                            Console.WriteLine("     8o o:                     o88oo O888    :8        :88   :: ::");
+                            Console.WriteLine("     oO  oo     o              O8o : O888     :o       oO8o ::  O");
+                            Console.WriteLine("      O:  Oo  ::o              OO    OO :             :oO88 O::O:");
+                            Console.WriteLine("       O  :8: :88o             OO    Oo             :O888O  8OO:");
+                            Console.WriteLine("       oo  Oo  O888o           :O:o:  :            o8888o  :O");
+                            Console.WriteLine("        :O888  :88888           :o  Oo            o8888o   8:");
+                            Console.WriteLine("           :8:  O8888               8            :O888O   :8");
+                            Console.WriteLine("           Oo  :8888               o             :888    :O");
+                            Console.WriteLine("            :O   o888  ::                         o88:    Oo");
+                            Console.WriteLine("            :O    O88OO8oOOoOOoOooOooOOOOOOOOOO88O88O     O:");
+                            Console.WriteLine("            OO     888:: o :o: o  o   O: 8: O o::o 8:     8");
+                            Console.WriteLine("           :8O     :88o:  :    :  :      ::        8      O");
+                            Console.WriteLine("           O8o      Oo:8oo:    :          :   :::oo8     :O");
+                            Console.WriteLine("           88o      Oo O :ooOOOoOO:OO   :8O:O O  o O     :O");
+                            Console.WriteLine("           88o      Oo :      o:o: :o    Oo : :  o       :O");
+                            Console.WriteLine("           88O       :oo:oo:o o :  :: oo :: o O::o       o:");
+                            Console.WriteLine("           888         :::::oO8O8OoO8O88oOOoo:         :Oo");
+                            Console.WriteLine("            O88Oo::               ::                  :O");
+                            Console.WriteLine("             :oO8888o                               :Oo");
+                            Console.WriteLine("                 :o88o                      oo    o8O:");
+                            Console.WriteLine("                    O8o                     Oo  o88o");
+                            Console.WriteLine("                     o8O     Oo    o           o88");
+                            Console.WriteLine("                      :88o        O:          O88");
+                            Console.WriteLine("                        O88o     :8o        o88O");
+                            Console.WriteLine("                          o88ooOO888O::::oO88O:");
+                            Console.WriteLine("                            o8888888888888Oo");
 
-                
+                            System.Threading.Thread.Sleep(500);
+                            Console.BackgroundColor = ConsoleColor.Black;
+                            Console.Clear();
+                            continue;
+                        }
+                        break;
+                    } while (true);
+                }
+
+
                 // Get side A from the user
                 // -------------------------------------
-                do
+
+                if (oper == 'p' || oper == 'P')
                 {
-
-                    Console.Write("Enter the side A for your triangle " + name + ": ");
-                    try
+                    do
                     {
-                        sideA = Convert.ToDouble(Console.ReadLine());
 
-                    }
-                    catch
+                        Console.Write("Enter the side A for your triangle " + name + ": ");
+                        try
+                        {
+                            sideA = Convert.ToDouble(Console.ReadLine());
+
+                        }
+                        catch
+                        {
+                            Console.BackgroundColor = ConsoleColor.Blue;
+                            Console.Clear();
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.WriteLine("Please write down the side A again " + name);
+                            System.Threading.Thread.Sleep(2000);
+                            Console.WriteLine("                                   :oooooooooo:");
+                            Console.WriteLine("                        ::oOOOOooo:::::ooooO88Oo:");
+                            Console.WriteLine("                     :oOOo:                   :oO8O:");
+                            Console.WriteLine("                  :O8O:                           oO8o");
+                            Console.WriteLine("                O8O:                                 :OO:");
+                            Console.WriteLine("              o8o                                      :8o");
+                            Console.WriteLine("             88:                                         O8:");
+                            Console.WriteLine("           o8o                                            :8o");
+                            Console.WriteLine("          8O:                                               oO");
+                            Console.WriteLine("         8o                                                  oO");
+                            Console.WriteLine("        8o                                                    Oo");
+                            Console.WriteLine("      :8o                                              :      :8:");
+                            Console.WriteLine("     :8:                                               :       :8:");
+                            Console.WriteLine("    :8:                                               :o        oO");
+                            Console.WriteLine("    O::o                                              oo         8:");
+                            Console.WriteLine("   :o:ooO                                             oo         o8");
+                            Console.WriteLine("   8    oo                                            :o          8o");
+                            Console.WriteLine("  oo     8o                                            OO:        :8");
+                            Console.WriteLine("  8      o8:                                            O8O:       8:");
+                            Console.WriteLine(" :o      :88                                             :8O       :O");
+                            Console.WriteLine(" o:     ::88:                                             O8        8");
+                            Console.WriteLine(" 8       888:                                             O8o       O");
+                            Console.WriteLine(":8       :88:                                             888Ooo:   oo");
+                            Console.WriteLine("oo       oO8:                                             888888o   :O");
+                            Console.WriteLine("Oo       O88           :oO88O:            oO88Oo:         O8888O    :O");
+                            Console.WriteLine("O:  ::   :88      :oO888888888:          8888888888OOo:    8888:    :O");
+                            Console.WriteLine("O:  :o    8o   o88888888888888:          88888888888888O:   o88     :O");
+                            Console.WriteLine("Oo   oo  oO  o888888888888888O           8888888888888888o   88     :O");
+                            Console.WriteLine(":O    O: oo  8888888888888888:          o88888888888888888   88     :O");
+                            Console.WriteLine(" 8    :o:8:  8888888888888888:::         :8888888888888888  o888o:::8O");
+                            Console.WriteLine(" O:   :88:   O88888888888888888           O888888888888888  o88888888O");
+                            Console.WriteLine("  o   :8O    o888888888888888O            O88888888888888O   88888888o");
+                            Console.WriteLine("  O:  :8:    88888888888888O:      :      O888888888888888   O8888888:");
+                            Console.WriteLine("  :O  :8     88888888888888       o88:    :o88888888888888    8888888");
+                            Console.WriteLine("   OoooO    :8888888888O:8o      :8O88       :O8888888888o     O888oo");
+                            Console.WriteLine("    888:     8888888o:  8O       :8o88O         O888888O:          :");
+                            Console.WriteLine("    :88       oOOo:   :O:        :8:888          8o");
+                            Console.WriteLine("     88              o:          88oO88o      :: :oo            :");
+                            Console.WriteLine("     88::               oo      O88O:888o    O8o:   :   ::     : :");
+                            Console.WriteLine("     8o o:                     o88oo O888    :8        :88   :: ::");
+                            Console.WriteLine("     oO  oo     o              O8o : O888     :o       oO8o ::  O");
+                            Console.WriteLine("      O:  Oo  ::o              OO    OO :             :oO88 O::O:");
+                            Console.WriteLine("       O  :8: :88o             OO    Oo             :O888O  8OO:");
+                            Console.WriteLine("       oo  Oo  O888o           :O:o:  :            o8888o  :O");
+                            Console.WriteLine("        :O888  :88888           :o  Oo            o8888o   8:");
+                            Console.WriteLine("           :8:  O8888               8            :O888O   :8");
+                            Console.WriteLine("           Oo  :8888               o             :888    :O");
+                            Console.WriteLine("            :O   o888  ::                         o88:    Oo");
+                            Console.WriteLine("            :O    O88OO8oOOoOOoOooOooOOOOOOOOOO88O88O     O:");
+                            Console.WriteLine("            OO     888:: o :o: o  o   O: 8: O o::o 8:     8");
+                            Console.WriteLine("           :8O     :88o:  :    :  :      ::        8      O");
+                            Console.WriteLine("           O8o      Oo:8oo:    :          :   :::oo8     :O");
+                            Console.WriteLine("           88o      Oo O :ooOOOoOO:OO   :8O:O O  o O     :O");
+                            Console.WriteLine("           88o      Oo :      o:o: :o    Oo : :  o       :O");
+                            Console.WriteLine("           88O       :oo:oo:o o :  :: oo :: o O::o       o:");
+                            Console.WriteLine("           888         :::::oO8O8OoO8O88oOOoo:         :Oo");
+                            Console.WriteLine("            O88Oo::               ::                  :O");
+                            Console.WriteLine("             :oO8888o                               :Oo");
+                            Console.WriteLine("                 :o88o                      oo    o8O:");
+                            Console.WriteLine("                    O8o                     Oo  o88o");
+                            Console.WriteLine("                     o8O     Oo    o           o88");
+                            Console.WriteLine("                      :88o        O:          O88");
+                            Console.WriteLine("                        O88o     :8o        o88O");
+                            Console.WriteLine("                          o88ooOO888O::::oO88O:");
+                            Console.WriteLine("                            o8888888888888Oo");
+
+                            System.Threading.Thread.Sleep(500);
+                            Console.BackgroundColor = ConsoleColor.Black;
+                            Console.Clear();
+                            continue;
+                        }
+                        break;
+                    } while (true);
+
+
+
+                    // Get side B from the user
+                    // -------------------------------------
+                    do
                     {
-                        Console.BackgroundColor = ConsoleColor.Blue;
-                        Console.Clear();
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("Please write down the side A again " + name);
-                        System.Threading.Thread.Sleep(2000);
-                        Console.WriteLine("                                   :oooooooooo:");
-                        Console.WriteLine("                        ::oOOOOooo:::::ooooO88Oo:");
-                        Console.WriteLine("                     :oOOo:                   :oO8O:");
-                        Console.WriteLine("                  :O8O:                           oO8o");
-                        Console.WriteLine("                O8O:                                 :OO:");
-                        Console.WriteLine("              o8o                                      :8o");
-                        Console.WriteLine("             88:                                         O8:");
-                        Console.WriteLine("           o8o                                            :8o");
-                        Console.WriteLine("          8O:                                               oO");
-                        Console.WriteLine("         8o                                                  oO");
-                        Console.WriteLine("        8o                                                    Oo");
-                        Console.WriteLine("      :8o                                              :      :8:");
-                        Console.WriteLine("     :8:                                               :       :8:");
-                        Console.WriteLine("    :8:                                               :o        oO");
-                        Console.WriteLine("    O::o                                              oo         8:");
-                        Console.WriteLine("   :o:ooO                                             oo         o8");
-                        Console.WriteLine("   8    oo                                            :o          8o");
-                        Console.WriteLine("  oo     8o                                            OO:        :8");
-                        Console.WriteLine("  8      o8:                                            O8O:       8:");
-                        Console.WriteLine(" :o      :88                                             :8O       :O");
-                        Console.WriteLine(" o:     ::88:                                             O8        8");
-                        Console.WriteLine(" 8       888:                                             O8o       O");
-                        Console.WriteLine(":8       :88:                                             888Ooo:   oo");
-                        Console.WriteLine("oo       oO8:                                             888888o   :O");
-                        Console.WriteLine("Oo       O88           :oO88O:            oO88Oo:         O8888O    :O");
-                        Console.WriteLine("O:  ::   :88      :oO888888888:          8888888888OOo:    8888:    :O");
-                        Console.WriteLine("O:  :o    8o   o88888888888888:          88888888888888O:   o88     :O");
-                        Console.WriteLine("Oo   oo  oO  o888888888888888O           8888888888888888o   88     :O");
-                        Console.WriteLine(":O    O: oo  8888888888888888:          o88888888888888888   88     :O");
-                        Console.WriteLine(" 8    :o:8:  8888888888888888:::         :8888888888888888  o888o:::8O");
-                        Console.WriteLine(" O:   :88:   O88888888888888888           O888888888888888  o88888888O");
-                        Console.WriteLine("  o   :8O    o888888888888888O            O88888888888888O   88888888o");
-                        Console.WriteLine("  O:  :8:    88888888888888O:      :      O888888888888888   O8888888:");
-                        Console.WriteLine("  :O  :8     88888888888888       o88:    :o88888888888888    8888888");
-                        Console.WriteLine("   OoooO    :8888888888O:8o      :8O88       :O8888888888o     O888oo");
-                        Console.WriteLine("    888:     8888888o:  8O       :8o88O         O888888O:          :");
-                        Console.WriteLine("    :88       oOOo:   :O:        :8:888          8o");
-                        Console.WriteLine("     88              o:          88oO88o      :: :oo            :");
-                        Console.WriteLine("     88::               oo      O88O:888o    O8o:   :   ::     : :");
-                        Console.WriteLine("     8o o:                     o88oo O888    :8        :88   :: ::");
-                        Console.WriteLine("     oO  oo     o              O8o : O888     :o       oO8o ::  O");
-                        Console.WriteLine("      O:  Oo  ::o              OO    OO :             :oO88 O::O:");
-                        Console.WriteLine("       O  :8: :88o             OO    Oo             :O888O  8OO:");
-                        Console.WriteLine("       oo  Oo  O888o           :O:o:  :            o8888o  :O");
-                        Console.WriteLine("        :O888  :88888           :o  Oo            o8888o   8:");
-                        Console.WriteLine("           :8:  O8888               8            :O888O   :8");
-                        Console.WriteLine("           Oo  :8888               o             :888    :O");
-                        Console.WriteLine("            :O   o888  ::                         o88:    Oo");
-                        Console.WriteLine("            :O    O88OO8oOOoOOoOooOooOOOOOOOOOO88O88O     O:");
-                        Console.WriteLine("            OO     888:: o :o: o  o   O: 8: O o::o 8:     8");
-                        Console.WriteLine("           :8O     :88o:  :    :  :      ::        8      O");
-                        Console.WriteLine("           O8o      Oo:8oo:    :          :   :::oo8     :O");
-                        Console.WriteLine("           88o      Oo O :ooOOOoOO:OO   :8O:O O  o O     :O");
-                        Console.WriteLine("           88o      Oo :      o:o: :o    Oo : :  o       :O");
-                        Console.WriteLine("           88O       :oo:oo:o o :  :: oo :: o O::o       o:");
-                        Console.WriteLine("           888         :::::oO8O8OoO8O88oOOoo:         :Oo");
-                        Console.WriteLine("            O88Oo::               ::                  :O");
-                        Console.WriteLine("             :oO8888o                               :Oo");
-                        Console.WriteLine("                 :o88o                      oo    o8O:");
-                        Console.WriteLine("                    O8o                     Oo  o88o");
-                        Console.WriteLine("                     o8O     Oo    o           o88");
-                        Console.WriteLine("                      :88o        O:          O88");
-                        Console.WriteLine("                        O88o     :8o        o88O");
-                        Console.WriteLine("                          o88ooOO888O::::oO88O:");
-                        Console.WriteLine("                            o8888888888888Oo");
 
-                        System.Threading.Thread.Sleep(500);
-                        Console.BackgroundColor = ConsoleColor.Black;
-                        Console.Clear();
-                        continue;
-                    }
-                    break;
-                } while (true);
+                        Console.Write("Enter the side B for your triangle " + name + ": ");
+                        try
+                        {
+                            sideB = Convert.ToDouble(Console.ReadLine());
+
+                        }
+                        catch
+                        {
+                            Console.BackgroundColor = ConsoleColor.Blue;
+                            Console.Clear();
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.WriteLine("Please write down the side B again " + name);
+                            System.Threading.Thread.Sleep(2000);
+                            Console.WriteLine("                                   :oooooooooo:");
+                            Console.WriteLine("                        ::oOOOOooo:::::ooooO88Oo:");
+                            Console.WriteLine("                     :oOOo:                   :oO8O:");
+                            Console.WriteLine("                  :O8O:                           oO8o");
+                            Console.WriteLine("                O8O:                                 :OO:");
+                            Console.WriteLine("              o8o                                      :8o");
+                            Console.WriteLine("             88:                                         O8:");
+                            Console.WriteLine("           o8o                                            :8o");
+                            Console.WriteLine("          8O:                                               oO");
+                            Console.WriteLine("         8o                                                  oO");
+                            Console.WriteLine("        8o                                                    Oo");
+                            Console.WriteLine("      :8o                                              :      :8:");
+                            Console.WriteLine("     :8:                                               :       :8:");
+                            Console.WriteLine("    :8:                                               :o        oO");
+                            Console.WriteLine("    O::o                                              oo         8:");
+                            Console.WriteLine("   :o:ooO                                             oo         o8");
+                            Console.WriteLine("   8    oo                                            :o          8o");
+                            Console.WriteLine("  oo     8o                                            OO:        :8");
+                            Console.WriteLine("  8      o8:                                            O8O:       8:");
+                            Console.WriteLine(" :o      :88                                             :8O       :O");
+                            Console.WriteLine(" o:     ::88:                                             O8        8");
+                            Console.WriteLine(" 8       888:                                             O8o       O");
+                            Console.WriteLine(":8       :88:                                             888Ooo:   oo");
+                            Console.WriteLine("oo       oO8:                                             888888o   :O");
+                            Console.WriteLine("Oo       O88           :oO88O:            oO88Oo:         O8888O    :O");
+                            Console.WriteLine("O:  ::   :88      :oO888888888:          8888888888OOo:    8888:    :O");
+                            Console.WriteLine("O:  :o    8o   o88888888888888:          88888888888888O:   o88     :O");
+                            Console.WriteLine("Oo   oo  oO  o888888888888888O           8888888888888888o   88     :O");
+                            Console.WriteLine(":O    O: oo  8888888888888888:          o88888888888888888   88     :O");
+                            Console.WriteLine(" 8    :o:8:  8888888888888888:::         :8888888888888888  o888o:::8O");
+                            Console.WriteLine(" O:   :88:   O88888888888888888           O888888888888888  o88888888O");
+                            Console.WriteLine("  o   :8O    o888888888888888O            O88888888888888O   88888888o");
+                            Console.WriteLine("  O:  :8:    88888888888888O:      :      O888888888888888   O8888888:");
+                            Console.WriteLine("  :O  :8     88888888888888       o88:    :o88888888888888    8888888");
+                            Console.WriteLine("   OoooO    :8888888888O:8o      :8O88       :O8888888888o     O888oo");
+                            Console.WriteLine("    888:     8888888o:  8O       :8o88O         O888888O:          :");
+                            Console.WriteLine("    :88       oOOo:   :O:        :8:888          8o");
+                            Console.WriteLine("     88              o:          88oO88o      :: :oo            :");
+                            Console.WriteLine("     88::               oo      O88O:888o    O8o:   :   ::     : :");
+                            Console.WriteLine("     8o o:                     o88oo O888    :8        :88   :: ::");
+                            Console.WriteLine("     oO  oo     o              O8o : O888     :o       oO8o ::  O");
+                            Console.WriteLine("      O:  Oo  ::o              OO    OO :             :oO88 O::O:");
+                            Console.WriteLine("       O  :8: :88o             OO    Oo             :O888O  8OO:");
+                            Console.WriteLine("       oo  Oo  O888o           :O:o:  :            o8888o  :O");
+                            Console.WriteLine("        :O888  :88888           :o  Oo            o8888o   8:");
+                            Console.WriteLine("           :8:  O8888               8            :O888O   :8");
+                            Console.WriteLine("           Oo  :8888               o             :888    :O");
+                            Console.WriteLine("            :O   o888  ::                         o88:    Oo");
+                            Console.WriteLine("            :O    O88OO8oOOoOOoOooOooOOOOOOOOOO88O88O     O:");
+                            Console.WriteLine("            OO     888:: o :o: o  o   O: 8: O o::o 8:     8");
+                            Console.WriteLine("           :8O     :88o:  :    :  :      ::        8      O");
+                            Console.WriteLine("           O8o      Oo:8oo:    :          :   :::oo8     :O");
+                            Console.WriteLine("           88o      Oo O :ooOOOoOO:OO   :8O:O O  o O     :O");
+                            Console.WriteLine("           88o      Oo :      o:o: :o    Oo : :  o       :O");
+                            Console.WriteLine("           88O       :oo:oo:o o :  :: oo :: o O::o       o:");
+                            Console.WriteLine("           888         :::::oO8O8OoO8O88oOOoo:         :Oo");
+                            Console.WriteLine("            O88Oo::               ::                  :O");
+                            Console.WriteLine("             :oO8888o                               :Oo");
+                            Console.WriteLine("                 :o88o                      oo    o8O:");
+                            Console.WriteLine("                    O8o                     Oo  o88o");
+                            Console.WriteLine("                     o8O     Oo    o           o88");
+                            Console.WriteLine("                      :88o        O:          O88");
+                            Console.WriteLine("                        O88o     :8o        o88O");
+                            Console.WriteLine("                          o88ooOO888O::::oO88O:");
+                            Console.WriteLine("                            o8888888888888Oo");
+
+                            System.Threading.Thread.Sleep(500);
+                            Console.BackgroundColor = ConsoleColor.Black;
+                            Console.Clear();
+                            continue;
+                        }
+                        break;
+                    } while (true);
+                }
 
 
-                // Get side B from the user
-                // -------------------------------------
-                do
+
+                //Get first number from user:
+                //----------------------------
+                if (oper != 'C' && oper != 'P' && oper != 'p')
                 {
-
-                    Console.Write("Enter the side B for your triangle " + name + ": ");
-                    try
+                    do
                     {
-                        sideB = Convert.ToDouble(Console.ReadLine());
 
-                    }
-                    catch
-                    {
-                        Console.BackgroundColor = ConsoleColor.Blue;
-                        Console.Clear();
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("Please write down the side B again " + name);
-                        System.Threading.Thread.Sleep(2000);
-                        Console.WriteLine("                                   :oooooooooo:");
-                        Console.WriteLine("                        ::oOOOOooo:::::ooooO88Oo:");
-                        Console.WriteLine("                     :oOOo:                   :oO8O:");
-                        Console.WriteLine("                  :O8O:                           oO8o");
-                        Console.WriteLine("                O8O:                                 :OO:");
-                        Console.WriteLine("              o8o                                      :8o");
-                        Console.WriteLine("             88:                                         O8:");
-                        Console.WriteLine("           o8o                                            :8o");
-                        Console.WriteLine("          8O:                                               oO");
-                        Console.WriteLine("         8o                                                  oO");
-                        Console.WriteLine("        8o                                                    Oo");
-                        Console.WriteLine("      :8o                                              :      :8:");
-                        Console.WriteLine("     :8:                                               :       :8:");
-                        Console.WriteLine("    :8:                                               :o        oO");
-                        Console.WriteLine("    O::o                                              oo         8:");
-                        Console.WriteLine("   :o:ooO                                             oo         o8");
-                        Console.WriteLine("   8    oo                                            :o          8o");
-                        Console.WriteLine("  oo     8o                                            OO:        :8");
-                        Console.WriteLine("  8      o8:                                            O8O:       8:");
-                        Console.WriteLine(" :o      :88                                             :8O       :O");
-                        Console.WriteLine(" o:     ::88:                                             O8        8");
-                        Console.WriteLine(" 8       888:                                             O8o       O");
-                        Console.WriteLine(":8       :88:                                             888Ooo:   oo");
-                        Console.WriteLine("oo       oO8:                                             888888o   :O");
-                        Console.WriteLine("Oo       O88           :oO88O:            oO88Oo:         O8888O    :O");
-                        Console.WriteLine("O:  ::   :88      :oO888888888:          8888888888OOo:    8888:    :O");
-                        Console.WriteLine("O:  :o    8o   o88888888888888:          88888888888888O:   o88     :O");
-                        Console.WriteLine("Oo   oo  oO  o888888888888888O           8888888888888888o   88     :O");
-                        Console.WriteLine(":O    O: oo  8888888888888888:          o88888888888888888   88     :O");
-                        Console.WriteLine(" 8    :o:8:  8888888888888888:::         :8888888888888888  o888o:::8O");
-                        Console.WriteLine(" O:   :88:   O88888888888888888           O888888888888888  o88888888O");
-                        Console.WriteLine("  o   :8O    o888888888888888O            O88888888888888O   88888888o");
-                        Console.WriteLine("  O:  :8:    88888888888888O:      :      O888888888888888   O8888888:");
-                        Console.WriteLine("  :O  :8     88888888888888       o88:    :o88888888888888    8888888");
-                        Console.WriteLine("   OoooO    :8888888888O:8o      :8O88       :O8888888888o     O888oo");
-                        Console.WriteLine("    888:     8888888o:  8O       :8o88O         O888888O:          :");
-                        Console.WriteLine("    :88       oOOo:   :O:        :8:888          8o");
-                        Console.WriteLine("     88              o:          88oO88o      :: :oo            :");
-                        Console.WriteLine("     88::               oo      O88O:888o    O8o:   :   ::     : :");
-                        Console.WriteLine("     8o o:                     o88oo O888    :8        :88   :: ::");
-                        Console.WriteLine("     oO  oo     o              O8o : O888     :o       oO8o ::  O");
-                        Console.WriteLine("      O:  Oo  ::o              OO    OO :             :oO88 O::O:");
-                        Console.WriteLine("       O  :8: :88o             OO    Oo             :O888O  8OO:");
-                        Console.WriteLine("       oo  Oo  O888o           :O:o:  :            o8888o  :O");
-                        Console.WriteLine("        :O888  :88888           :o  Oo            o8888o   8:");
-                        Console.WriteLine("           :8:  O8888               8            :O888O   :8");
-                        Console.WriteLine("           Oo  :8888               o             :888    :O");
-                        Console.WriteLine("            :O   o888  ::                         o88:    Oo");
-                        Console.WriteLine("            :O    O88OO8oOOoOOoOooOooOOOOOOOOOO88O88O     O:");
-                        Console.WriteLine("            OO     888:: o :o: o  o   O: 8: O o::o 8:     8");
-                        Console.WriteLine("           :8O     :88o:  :    :  :      ::        8      O");
-                        Console.WriteLine("           O8o      Oo:8oo:    :          :   :::oo8     :O");
-                        Console.WriteLine("           88o      Oo O :ooOOOoOO:OO   :8O:O O  o O     :O");
-                        Console.WriteLine("           88o      Oo :      o:o: :o    Oo : :  o       :O");
-                        Console.WriteLine("           88O       :oo:oo:o o :  :: oo :: o O::o       o:");
-                        Console.WriteLine("           888         :::::oO8O8OoO8O88oOOoo:         :Oo");
-                        Console.WriteLine("            O88Oo::               ::                  :O");
-                        Console.WriteLine("             :oO8888o                               :Oo");
-                        Console.WriteLine("                 :o88o                      oo    o8O:");
-                        Console.WriteLine("                    O8o                     Oo  o88o");
-                        Console.WriteLine("                     o8O     Oo    o           o88");
-                        Console.WriteLine("                      :88o        O:          O88");
-                        Console.WriteLine("                        O88o     :8o        o88O");
-                        Console.WriteLine("                          o88ooOO888O::::oO88O:");
-                        Console.WriteLine("                            o8888888888888Oo");
+                        Console.Write("Enter your first number " + name + ": ");
+                        try
+                        {
+                            x = Convert.ToDouble(Console.ReadLine());
 
-                        System.Threading.Thread.Sleep(500);
-                        Console.BackgroundColor = ConsoleColor.Black;
-                        Console.Clear();
-                        continue;
-                    }
-                    break;
-                } while (true);
-                
+                        }
+                        catch
+                        {
+                            Console.BackgroundColor = ConsoleColor.Yellow;
+                            Console.Clear();
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.WriteLine("Please write down the first number again " + name);
+                            System.Threading.Thread.Sleep(2000);
+                            Console.WriteLine("                                   :oooooooooo:");
+                            Console.WriteLine("                        ::oOOOOooo:::::ooooO88Oo:");
+                            Console.WriteLine("                     :oOOo:                   :oO8O:");
+                            Console.WriteLine("                  :O8O:                           oO8o");
+                            Console.WriteLine("                O8O:                                 :OO:");
+                            Console.WriteLine("              o8o                                      :8o");
+                            Console.WriteLine("             88:                                         O8:");
+                            Console.WriteLine("           o8o                                            :8o");
+                            Console.WriteLine("          8O:                                               oO");
+                            Console.WriteLine("         8o                                                  oO");
+                            Console.WriteLine("        8o                                                    Oo");
+                            Console.WriteLine("      :8o                                              :      :8:");
+                            Console.WriteLine("     :8:                                               :       :8:");
+                            Console.WriteLine("    :8:                                               :o        oO");
+                            Console.WriteLine("    O::o                                              oo         8:");
+                            Console.WriteLine("   :o:ooO                                             oo         o8");
+                            Console.WriteLine("   8    oo                                            :o          8o");
+                            Console.WriteLine("  oo     8o                                            OO:        :8");
+                            Console.WriteLine("  8      o8:                                            O8O:       8:");
+                            Console.WriteLine(" :o      :88                                             :8O       :O");
+                            Console.WriteLine(" o:     ::88:                                             O8        8");
+                            Console.WriteLine(" 8       888:                                             O8o       O");
+                            Console.WriteLine(":8       :88:                                             888Ooo:   oo");
+                            Console.WriteLine("oo       oO8:                                             888888o   :O");
+                            Console.WriteLine("Oo       O88           :oO88O:            oO88Oo:         O8888O    :O");
+                            Console.WriteLine("O:  ::   :88      :oO888888888:          8888888888OOo:    8888:    :O");
+                            Console.WriteLine("O:  :o    8o   o88888888888888:          88888888888888O:   o88     :O");
+                            Console.WriteLine("Oo   oo  oO  o888888888888888O           8888888888888888o   88     :O");
+                            Console.WriteLine(":O    O: oo  8888888888888888:          o88888888888888888   88     :O");
+                            Console.WriteLine(" 8    :o:8:  8888888888888888:::         :8888888888888888  o888o:::8O");
+                            Console.WriteLine(" O:   :88:   O88888888888888888           O888888888888888  o88888888O");
+                            Console.WriteLine("  o   :8O    o888888888888888O            O88888888888888O   88888888o");
+                            Console.WriteLine("  O:  :8:    88888888888888O:      :      O888888888888888   O8888888:");
+                            Console.WriteLine("  :O  :8     88888888888888       o88:    :o88888888888888    8888888");
+                            Console.WriteLine("   OoooO    :8888888888O:8o      :8O88       :O8888888888o     O888oo");
+                            Console.WriteLine("    888:     8888888o:  8O       :8o88O         O888888O:          :");
+                            Console.WriteLine("    :88       oOOo:   :O:        :8:888          8o");
+                            Console.WriteLine("     88              o:          88oO88o      :: :oo            :");
+                            Console.WriteLine("     88::               oo      O88O:888o    O8o:   :   ::     : :");
+                            Console.WriteLine("     8o o:                     o88oo O888    :8        :88   :: ::");
+                            Console.WriteLine("     oO  oo     o              O8o : O888     :o       oO8o ::  O");
+                            Console.WriteLine("      O:  Oo  ::o              OO    OO :             :oO88 O::O:");
+                            Console.WriteLine("       O  :8: :88o             OO    Oo             :O888O  8OO:");
+                            Console.WriteLine("       oo  Oo  O888o           :O:o:  :            o8888o  :O");
+                            Console.WriteLine("        :O888  :88888           :o  Oo            o8888o   8:");
+                            Console.WriteLine("           :8:  O8888               8            :O888O   :8");
+                            Console.WriteLine("           Oo  :8888               o             :888    :O");
+                            Console.WriteLine("            :O   o888  ::                         o88:    Oo");
+                            Console.WriteLine("            :O    O88OO8oOOoOOoOooOooOOOOOOOOOO88O88O     O:");
+                            Console.WriteLine("            OO     888:: o :o: o  o   O: 8: O o::o 8:     8");
+                            Console.WriteLine("           :8O     :88o:  :    :  :      ::        8      O");
+                            Console.WriteLine("           O8o      Oo:8oo:    :          :   :::oo8     :O");
+                            Console.WriteLine("           88o      Oo O :ooOOOoOO:OO   :8O:O O  o O     :O");
+                            Console.WriteLine("           88o      Oo :      o:o: :o    Oo : :  o       :O");
+                            Console.WriteLine("           88O       :oo:oo:o o :  :: oo :: o O::o       o:");
+                            Console.WriteLine("           888         :::::oO8O8OoO8O88oOOoo:         :Oo");
+                            Console.WriteLine("            O88Oo::               ::                  :O");
+                            Console.WriteLine("             :oO8888o                               :Oo");
+                            Console.WriteLine("                 :o88o                      oo    o8O:");
+                            Console.WriteLine("                    O8o                     Oo  o88o");
+                            Console.WriteLine("                     o8O     Oo    o           o88");
+                            Console.WriteLine("                      :88o        O:          O88");
+                            Console.WriteLine("                        O88o     :8o        o88O");
+                            Console.WriteLine("                          o88ooOO888O::::oO88O:");
+                            Console.WriteLine("                            o8888888888888Oo");
 
-                
-                //Get first number from user:
-                //----------------------------
-                do
-                {
-
-                    Console.Write("Enter your first number " + name + ": ");
-                    try
-                    {
-                        x = Convert.ToDouble(Console.ReadLine());
-
-                    }
-                    catch
-                    {
-                        Console.BackgroundColor = ConsoleColor.Yellow;
-                        Console.Clear();
-                        Console.ForegroundColor = ConsoleColor.Blue;
-                        Console.WriteLine("Please write down the first number again " + name);
-                        System.Threading.Thread.Sleep(2000);
-                        Console.WriteLine("                                   :oooooooooo:");
-                        Console.WriteLine("                        ::oOOOOooo:::::ooooO88Oo:");
-                        Console.WriteLine("                     :oOOo:                   :oO8O:");
-                        Console.WriteLine("                  :O8O:                           oO8o");
-                        Console.WriteLine("                O8O:                                 :OO:");
-                        Console.WriteLine("              o8o                                      :8o");
-                        Console.WriteLine("             88:                                         O8:");
-                        Console.WriteLine("           o8o                                            :8o");
-                        Console.WriteLine("          8O:                                               oO");
-                        Console.WriteLine("         8o                                                  oO");
-                        Console.WriteLine("        8o                                                    Oo");
-                        Console.WriteLine("      :8o                                              :      :8:");
-                        Console.WriteLine("     :8:                                               :       :8:");
-                        Console.WriteLine("    :8:                                               :o        oO");
-                        Console.WriteLine("    O::o                                              oo         8:");
-                        Console.WriteLine("   :o:ooO                                             oo         o8");
-                        Console.WriteLine("   8    oo                                            :o          8o");
-                        Console.WriteLine("  oo     8o                                            OO:        :8");
-                        Console.WriteLine("  8      o8:                                            O8O:       8:");
-                        Console.WriteLine(" :o      :88                                             :8O       :O");
-                        Console.WriteLine(" o:     ::88:                                             O8        8");
-                        Console.WriteLine(" 8       888:                                             O8o       O");
-                        Console.WriteLine(":8       :88:                                             888Ooo:   oo");
-                        Console.WriteLine("oo       oO8:                                             888888o   :O");
-                        Console.WriteLine("Oo       O88           :oO88O:            oO88Oo:         O8888O    :O");
-                        Console.WriteLine("O:  ::   :88      :oO888888888:          8888888888OOo:    8888:    :O");
-                        Console.WriteLine("O:  :o    8o   o88888888888888:          88888888888888O:   o88     :O");
-                        Console.WriteLine("Oo   oo  oO  o888888888888888O           8888888888888888o   88     :O");
-                        Console.WriteLine(":O    O: oo  8888888888888888:          o88888888888888888   88     :O");
-                        Console.WriteLine(" 8    :o:8:  8888888888888888:::         :8888888888888888  o888o:::8O");
-                        Console.WriteLine(" O:   :88:   O88888888888888888           O888888888888888  o88888888O");
-                        Console.WriteLine("  o   :8O    o888888888888888O            O88888888888888O   88888888o");
-                        Console.WriteLine("  O:  :8:    88888888888888O:      :      O888888888888888   O8888888:");
-                        Console.WriteLine("  :O  :8     88888888888888       o88:    :o88888888888888    8888888");
-                        Console.WriteLine("   OoooO    :8888888888O:8o      :8O88       :O8888888888o     O888oo");
-                        Console.WriteLine("    888:     8888888o:  8O       :8o88O         O888888O:          :");
-                        Console.WriteLine("    :88       oOOo:   :O:        :8:888          8o");
-                        Console.WriteLine("     88              o:          88oO88o      :: :oo            :");
-                        Console.WriteLine("     88::               oo      O88O:888o    O8o:   :   ::     : :");
-                        Console.WriteLine("     8o o:                     o88oo O888    :8        :88   :: ::");
-                        Console.WriteLine("     oO  oo     o              O8o : O888     :o       oO8o ::  O");
-                        Console.WriteLine("      O:  Oo  ::o              OO    OO :             :oO88 O::O:");
-                        Console.WriteLine("       O  :8: :88o             OO    Oo             :O888O  8OO:");
-                        Console.WriteLine("       oo  Oo  O888o           :O:o:  :            o8888o  :O");
-                        Console.WriteLine("        :O888  :88888           :o  Oo            o8888o   8:");
-                        Console.WriteLine("           :8:  O8888               8            :O888O   :8");
-                        Console.WriteLine("           Oo  :8888               o             :888    :O");
-                        Console.WriteLine("            :O   o888  ::                         o88:    Oo");
-                        Console.WriteLine("            :O    O88OO8oOOoOOoOooOooOOOOOOOOOO88O88O     O:");
-                        Console.WriteLine("            OO     888:: o :o: o  o   O: 8: O o::o 8:     8");
-                        Console.WriteLine("           :8O     :88o:  :    :  :      ::        8      O");
-                        Console.WriteLine("           O8o      Oo:8oo:    :          :   :::oo8     :O");
-                        Console.WriteLine("           88o      Oo O :ooOOOoOO:OO   :8O:O O  o O     :O");
-                        Console.WriteLine("           88o      Oo :      o:o: :o    Oo : :  o       :O");
-                        Console.WriteLine("           88O       :oo:oo:o o :  :: oo :: o O::o       o:");
-                        Console.WriteLine("           888         :::::oO8O8OoO8O88oOOoo:         :Oo");
-                        Console.WriteLine("            O88Oo::               ::                  :O");
-                        Console.WriteLine("             :oO8888o                               :Oo");
-                        Console.WriteLine("                 :o88o                      oo    o8O:");
-                        Console.WriteLine("                    O8o                     Oo  o88o");
-                        Console.WriteLine("                     o8O     Oo    o           o88");
-                        Console.WriteLine("                      :88o        O:          O88");
-                        Console.WriteLine("                        O88o     :8o        o88O");
-                        Console.WriteLine("                          o88ooOO888O::::oO88O:");
-                        Console.WriteLine("                            o8888888888888Oo");
-
-                        System.Threading.Thread.Sleep(500);
-                        Console.BackgroundColor = ConsoleColor.Black;
-                        Console.Clear();
-                        continue;
-                    }
-                    break;
-                } while (true);
+                            System.Threading.Thread.Sleep(500);
+                            Console.BackgroundColor = ConsoleColor.Black;
+                            Console.Clear();
+                            continue;
+                        }
+                        break;
+                    } while (true);
+                }
 
 
                 // Get second number from user:
@@ -734,7 +746,7 @@ namespace TheUltimateCalculator
 
                 do
                 {
-                    if (oper != 's' && oper != 'C' && oper != 'a' && oper != 'A' && oper != 'c' && oper != 'c' && oper != 'f' && oper != 'F' && oper != 'P' && oper != 'p')
+                    if (oper != 's' && oper != 'C' && oper != 'a' && oper != 'A' && oper != 'c' && oper != 'S' && oper != 'f' && oper != 'F' && oper != 'P' && oper != 'p')
                     {
                         try
                         {
@@ -868,13 +880,13 @@ namespace TheUltimateCalculator
 
                 else if (oper == 's' || oper == 'S')
                 {
-                    answer = Math.Sqrt(x);
-                }//End of else if
+                    answer = Math.Sqrt(x);
+                }//End of else if
 
-                else if (oper == 'a' || oper == 'A') 
+                else if (oper == 'a' || oper == 'A')
                 {
-                    answer = Math.Abs(x);
-                }//End of else if
+                    answer = Math.Abs(x);
+                }//End of else if
 
                 else if (oper == 'c')
                 {
@@ -890,7 +902,7 @@ namespace TheUltimateCalculator
                 {
                     answer = rdm.Next((int)x, (int)y); //casting: implicitely convert (this is beacuse Next function likes integers not doubles)
                 }//End of else if
-                
+
                 else if (oper == 'C')
                 {
                     answer = 2 * Math.PI * (z);
@@ -899,10 +911,10 @@ namespace TheUltimateCalculator
                 else if (oper == 'p' || oper == 'P')
                 {
                     // Calculate the length of the hypotenuse
-                     hypotenuse = Math.Sqrt(sideA * sideA + sideB * sideB);
-                    
+                    hypotenuse = Math.Sqrt(sideA * sideA + sideB * sideB);
+
                     // Calculate the perimeter
-                     answer = sideA + sideB + hypotenuse;
+                    answer = sideA + sideB + hypotenuse;
                 }//End of else if 
 
 
@@ -924,15 +936,15 @@ namespace TheUltimateCalculator
                     Console.WriteLine(x + " raised to the power " + y + " is " + answer);
                 }//End of else if
 
-                else if (oper == 's' || oper == 'S') 
+                else if (oper == 's' || oper == 'S')
                 {
-                    Console.WriteLine("The square root of " + x + " is " + answer);
-                }//End of else if
+                    Console.WriteLine("The square root of " + x + " is " + answer);
+                }//End of else if
 
-                else if (oper == 'a' || oper == 'A') 
+                else if (oper == 'a' || oper == 'A')
                 {
-                    Console.WriteLine("The absolute value of " + x + " is " + answer);
-                }//End of else if
+                    Console.WriteLine("The absolute value of " + x + " is " + answer);
+                }//End of else if
 
                 else if (oper == 'c')
                 {
@@ -956,9 +968,8 @@ namespace TheUltimateCalculator
 
                 else if (oper == 'P' || oper == 'p')
                 {
-                    Console.WriteLine("The perimeter of your right triangle with the side lengths of " + sideA + sideB + " and the hypotenuse of " + hypotenuse + " is " + answer);
+                    Console.WriteLine("The perimeter of your right triangle with the side lengths of " + sideA + ", " + sideB + " and the hypotenuse of " + hypotenuse + " is " + answer);
                 }//End of else if 
- 
 
 
 
@@ -966,10 +977,11 @@ namespace TheUltimateCalculator
 
 
 
-                //Get user choice to repeat (y/n)
-                //--------------------------------
 
-                do
+                //Get user choice to repeat (y/n)
+                //--------------------------------
+
+                do
                 {
                     Console.Write(name + ", would you like to use this pretty neat calculator again?\n(y/n) ");
 
