@@ -156,11 +156,11 @@ namespace TheUltimateCalculator
                     Console.WriteLine(@"
 ────── The Ultimate Calculator ──────
 ┌────────────────────────────────────────┐
-│ sqrt - Square Root │
-│ floor or f - floor │
-│ ceil or c - ceiling │
-│ abs or a- absolute value │
-│ circumference or cir - │
+│ s - Square Root │
+│ f - floor │
+│ c - ceiling │
+│ a- absolute value │
+│ (capital) C - │
 │ circumfrence of circle with radius x │
 │ ~ - random decimal between x and y │ 
 │ + - addition │
@@ -169,7 +169,7 @@ namespace TheUltimateCalculator
 │ / - division │
 │ % - modulus │
 │ ^ - power │
-│ righttriangleperimeter or rtp - │
+│ p - │
 │ perimeter of right triangle │
 │ with base x and height y │
 └────────────────────────────────────────┘
@@ -268,7 +268,7 @@ namespace TheUltimateCalculator
 
                     // More logical error-checking
                     //------------------------
-                    if (oper != '+' && oper != '-' && oper != '*' && oper != '/' && oper != '%' && oper != '^' && oper != "sqrt" && oper != "abs" && oper != 'c' && oper != 'f' && oper != "cir" && oper != 'a' && oper != "ceil" && oper != "floor" && oper != '~' && oper != "circumference" && oper != "riaghttriangleperimeter" && oper != "rtp")
+                if (oper != '+' && oper != '-' && oper != '*' && oper != '/' && oper != '%' && oper != '^' && oper != 's' && oper != 'a' && oper != 'c' && oper != 'f' && oper != 'C' && oper != 'A' && oper != 'F' && oper != 'S' && oper != '~' && oper != 'p' && oper != 'P')
                     {
 
                         Console.BackgroundColor = ConsoleColor.White;
@@ -732,7 +732,7 @@ namespace TheUltimateCalculator
 
                 do
                 {
-                    if (oper != "sqrt" && oper != "cir" && oper != 'a' && oper != "abs" && oper != 'c' && oper != "ceil" && oper != 'f' && oper != "floor" && oper != "circumference")
+                    if (oper != 's' && oper != 'C' && oper != 'a' && oper != 'A' && oper != 'c' && oper != 'c' && oper != 'f' && oper != 'F' && oper != 'P' && oper != 'p')
                     {
                         try
                         {
@@ -864,22 +864,22 @@ namespace TheUltimateCalculator
                     answer = Math.Pow(x, y);
                 }//End of else if
 
-                else if (oper == "sqrt")
+                else if (oper == 's' || oper == 'S')
                 {
-                    answer = Math.Sqrt(x);
-                }//End of else if
+                    answer = Math.Sqrt(x);
+                }//End of else if
 
-                else if (oper == 'a' || oper == "abs")
+                else if (oper == 'a' || oper == 'A') 
                 {
-                    answer = Math.Abs(x);
-                }//End of else if
+                    answer = Math.Abs(x);
+                }//End of else if
 
-                else if (oper == 'c' || oper == "ceil")
+                else if (oper == 'c')
                 {
                     answer = Math.Ceiling(x);
                 }//End of else if
 
-                else if (oper == 'f' || oper == "floor")
+                else if (oper == 'f' || oper == 'F')
                 {
                     answer = Math.Floor(x);
                 }//End of else if
@@ -889,12 +889,12 @@ namespace TheUltimateCalculator
                     answer = rdm.Next((int)x, (int)y); //casting: implicitely convert (this is beacuse Next function likes integers not doubles)
                 }//End of else if
                 
-                else if (oper == "circumfernce" || oper == "cir")
+                else if (oper == 'C')
                 {
                     answer = 2 * Math.PI * (z);
                 }//End of else if
 
-                else if (oper == "righttriangleperimeter" || oper == "rtp")
+                else if (oper == 'p' || oper == 'P')
                 {
                     // Calculate the length of the hypotenuse
                      hypotenuse = Math.Sqrt(sideA * sideA + sideB * sideB);
@@ -922,23 +922,22 @@ namespace TheUltimateCalculator
                     Console.WriteLine(x + " raised to the power " + y + " is " + answer);
                 }//End of else if
 
-                else if (oper == "sqrt")
+                else if (oper == 's' || oper == 'S') 
                 {
-                    Console.WriteLine("The square root of " + x + " is " + answer);
-                }//End of else if
+                    Console.WriteLine("The square root of " + x + " is " + answer);
+                }//End of else if
 
-                else if (oper == 'a' || oper == "abs")
+                else if (oper == 'a' || oper == 'A') 
                 {
-                    Console.WriteLine("The absolute value of " + x + " is " + answer);
+                    Console.WriteLine("The absolute value of " + x + " is " + answer);
+                }//End of else if
 
-                }//End of else if
-
-                else if (oper == 'c' || oper == "ceil")
+                else if (oper == 'c')
                 {
                     Console.WriteLine("When you round " + x + " up to the nearest number, you get " + answer);
                 }//End of else if
 
-                else if (oper == 'f' || oper == "floor")
+                else if (oper == 'f' || oper == 'F')
                 {
                     Console.WriteLine("When you round " + x + " down to the nearest number, you get " + answer);
                 }//End of else if
@@ -948,12 +947,12 @@ namespace TheUltimateCalculator
                     Console.WriteLine("A random number from " + x + " to " + y + " is " + answer);
                 }//End of else if
 
-                else if (oper == "circumference" || oper == "cir")
+                else if (oper == 'C')
                 {
                     Console.WriteLine("The circumference of a circle with the radius of " + z + " is " + answer);
                 }//End of else if 
 
-                else if (oper == "righttriangleperimeter" || oper == "rtp")
+                else if (oper == 'P' || oper == 'p')
                 {
                     Console.WriteLine("The perimeter of your right triangle with the side lengths of " + sideA + sideB + " and the hypotenuse of " + hypotenuse + " is " + answer);
                 }//End of else if 
